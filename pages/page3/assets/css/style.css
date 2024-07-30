@@ -1,0 +1,236 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f4f6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: #282c34;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease-out;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+nav ul li:nth-child(odd) {
+    animation: fadeInRight 1s ease-out;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #030607;
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+main section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(6, 26, 211, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
+    animation: zoomIn 1s ease-out;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+main h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #d6bdbd;
+    margin: 10px auto;
+    transition: width 0.3s ease-in-out;
+}
+
+main h2:hover:after {
+    width: 100px;
+}
+
+main p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    animation: fadeIn 1s ease-out;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    background: #03191f;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(219, 0, 0);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    animation: slideInLeft 1s ease-out;
+}
+
+main ul li:hover {
+    transform: scale(1.05);
+    background-color: #020105a4;
+}
+
+main ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #282c34;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+footer .container {
+    padding: 0 20px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
