@@ -1,15 +1,20 @@
-*body {
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: #f3f4f6;
     color: #333;
+    padding-top: 60px; /* Adjust this value based on the height of your header */
 }
 
 header {
     background: #282c34;
     color: white;
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other content */
 }
 
 header .container {
@@ -54,99 +59,71 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 40px 20px;
-    text-align: center;
+    padding: 80px 20px 40px; /* Adjusting padding to ensure content is not hidden under header */
 }
 
-main .about-me {
+.about-me, .skills-section, .education-section {
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-in-out;
     max-width: 800px;
-    margin: 0 auto;
-    position: relative;
+    margin: 20px auto;
+    text-align: left;
 }
 
-main .about-me:hover {
+.about-me:hover, .skills-section:hover, .education-section:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-main .image-container {
-    display: flex;
-    justify-content: center;
+.image-container {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-main .profile-image {
+.profile-image {
+    max-width: 150px;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-main .profile-image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.856);
-}
-
-main h2 {
+h2 {
     font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
-    position: relative;
+    text-align: center;
 }
 
-main h2:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #011216;
-    margin: 10px auto;
-    transition: width 0.3s ease-in-out;
+.personal-info p {
+    margin: 5px 0;
 }
 
-main h2:hover:after {
-    width: 100px;
+.skill {
+    margin-bottom: 20px;
 }
 
-main p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #fe9898;
-    margin: 0 auto;
-    max-width: 700px;
-    transition: opacity 0.5s ease-in-out;
-}
-
-main p:hover {
-    opacity: 0.8;
-}
-
-.button-container {
-    margin-top: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+.skill-name {
     font-weight: 600;
-    color: white;
-    background-color: #000000;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-bottom: 5px;
 }
 
-.cta-button:hover {
-    background-color: #18242c;
-    transform: scale(1.05);
+.skill-bar {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.skill-level {
+    height: 100%;
+    background: #4caf50;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    line-height: 20px;
+    border-radius: 5px 0 0 5px;
 }
 
 footer {
