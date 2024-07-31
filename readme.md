@@ -64,18 +64,21 @@ Description of the project in details.
 Guiding Question:
 
 - What is the project
+  The project is a porfololio with the compilation of my different works in the courseware 
 - Whats the purpose
+  The purpose is to showcase the different works I have made in web design
 - What are key components
+  Call to action buttons
+  Multipages
 - What technology used and how it is used
+  The technology used is CSS and HTML
 
 ### Key Components
 
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
 
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- MultiPage Website
 
 ### Technology
 
